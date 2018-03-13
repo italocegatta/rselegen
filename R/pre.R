@@ -29,7 +29,7 @@ selegen_pre <- function(arquivo, variaveis) {
             TRUE ~ 1
           )
         ) %>%
-        dplyr::select(IND, Tratamento, Bloco, PARC, Navr, DAP, Htotal, Vol_ind, SOB, Cod) %>%
+        dplyr::select(IND, Tratamento, Bloco, PARC, Navr, DAP, Htotal, Vol_ind, SOB) %>%
         write.table(file_out, dec = ".", row.names = F, na = "0", quote = FALSE)
     }
   }
