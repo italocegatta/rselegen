@@ -12,6 +12,19 @@ Uso interno Suzano Papel e Celulose.
 devtools::install_github("italocegatta/rselegen")
 ```
 
+Caso apareça o seguinte problema:
+
+```
+"Peer certificate cannot be authenticated with given CA certificates"
+```
+
+Execute este comando:
+
+``` r
+library(httr)
+set_config(config(ssl_verifypeer = 0L))
+```
+
 ## Utilização
 
 1) Criar uma pasta contendo o arquivo do inventário;
