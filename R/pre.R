@@ -45,7 +45,7 @@ selegen_pre <- function(arquivo, variaveis) {
         dplyr::distinct(UP, UP, Experimento, Bloco, Tratamento, Navr, DAP, .keep_all = TRUE)
       
       if (nrow(df_bif_ok) == 0) {
-        df_base <- readxl::read_excel(arquivos[k])
+        df_base <- readxl::read_excel(arquivo)
       }
       
       df_base <- dplyr::bind_rows(df_norm, df_bif_ok) %>% 
@@ -57,7 +57,7 @@ selegen_pre <- function(arquivo, variaveis) {
           IND = 1:nrow(.),
           PARC = paste0(Tratamento, Bloco),
           SOB = dplyr::case_when(
-            Cod %in% c("FALHAS", "MORTA", "QUEBRADA", "ARV MORTA QUEBRADA") ~ 0,
+          Cod %in% c("FALHAS", "MORTA", "QUEBRADA", "ARV MORTA QUEBRADA", "TOCO") ~ 0,
             TRUE ~ 1
           )
         ) %>%
