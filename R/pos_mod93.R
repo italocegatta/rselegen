@@ -1,3 +1,6 @@
+#' Extrai resultados do modelo 93.
+#'
+#' @export
 selegen_tab_mod93 <- function(resultado) {
   #base
   txt <- read.delim2(resultado, header = FALSE, stringsAsFactors = FALSE)

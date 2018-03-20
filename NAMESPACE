@@ -2,5 +2,6 @@
 
 export("%>%")
 export(selegen_pre)
+export(selegen_tab_mod93)
 export(selegen_tab_mod94)
 importFrom(dplyr,"%>%")
