@@ -57,7 +57,7 @@ selegen_pre <- function(arquivo, variaveis) {
           IND = 1:nrow(.),
           PARC = paste0(Tratamento, Bloco),
           SOB = dplyr::case_when(
-          Cod %in% c("FALHAS", "MORTA", "QUEBRADA", "ARV MORTA QUEBRADA", "TOCO") ~ 0,
+          Cod %in% c("FALHA", "MORTA", "QUEBRADA", "TOCO") ~ 0,
             TRUE ~ 1
           )
         ) %>%
