@@ -64,7 +64,7 @@ selegen_pre <- function(arquivo, variaveis) {
         dplyr::select(IND, Tratamento, Bloco, PARC, Navr, DAP, Htotal, Vol_ind, SOB, Cod)
       
       df_temp[
-        df_temp$Cod %in% c("FALHAS", "MORTA", "QUEBRADA", "ARV MORTA QUEBRADA"),
+        df_temp$Cod %in% c("FALHA", "MORTA", "QUEBRADA"),
         c("DAP", "Htotal", "Vol_ind")
       ] <- 0
       
