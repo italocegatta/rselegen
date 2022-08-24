@@ -7,8 +7,8 @@ Organizar arquivos para pré e pós processamento no Selegen.
 
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("italocegatta/rselegen")
+# install.packages("remotes")
+remotes::install_github("italocegatta/rselegen")
 ```
 
 Caso apareça o seguinte problema:
