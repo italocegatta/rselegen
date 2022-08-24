@@ -1,7 +1,6 @@
 # rselegen
 
 Organizar arquivos para pré e pós processamento no Selegen.  
-Uso interno Suzano Papel e Celulose.
 
 
 ## Instalação
